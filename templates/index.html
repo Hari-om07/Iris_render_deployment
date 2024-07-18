@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classifier</title>
+    <link rel="stylesheet" href="\static\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Iris Flower Classification</h1>
+        <form id="classificationForm" action="/predict" method="post">
+            <div class="form-group">
+                <b><label for="sepal_length">Sepal Length:</label></b>
+                <input type="text" class="form-control" id="sepal_length" name="sepal_length" required>
+            </div>
+            <div class="form-group">
+                <b><label for="sepal_width">Sepal Width:</label></b>
+                <input type="text" class="form-control" id="sepal_width" name="sepal_width" required>
+            </div>
+            <div class="form-group">
+                <b><label for="petal_length">Petal Length:</label></b>
+                <input type="text" class="form-control" id="petal_length" name="petal_length" required>
+            </div>
+            <div class="form-group">
+                <b><label for="petal_width">Petal Width:</label></b>
+                <input type="text" class="form-control" id="petal_width" name="petal_width" required>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <div class="result-container" id="resultContainer">
+                <h2>{{ prediction_text }}</h2>
+            </div>
+        {% endif %}
+    </div>
+    <script src="\static\dots.js"></script>
+</body>
+</html>
