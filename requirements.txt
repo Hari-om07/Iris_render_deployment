@@ -3,7 +3,7 @@ gunicorn
 numpy
 Flask
 gunicorn
-scikit-learn==1.5.1
+scikit-learn
 joblib
 
 
